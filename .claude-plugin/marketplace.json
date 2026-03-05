@@ -1,0 +1,22 @@
+{
+  "name": "commercial-workflows",
+  "owner": {
+    "name": "One Thousand GmbH",
+    "email": "bhavesh@onethousand.ai"
+  },
+  "metadata": {
+    "description": "Sales and commercial workflow automation skills",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "commercial-workflows",
+      "description": "Sales and commercial workflow automation. Analyzes inbound email threads, classifies lead intent, drafts context-aware responses with M365 Outlook integration.",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/sales-email-response"
+      ]
+    }
+  ]
+}
