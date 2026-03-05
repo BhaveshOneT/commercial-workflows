@@ -1,0 +1,11 @@
+{
+  "name": "commercial-workflows",
+  "version": "1.0.0",
+  "description": "Sales and commercial workflow automation. Analyzes inbound email threads, classifies lead intent, drafts context-aware responses with M365 Outlook integration.",
+  "author": {
+    "name": "One Thousand GmbH"
+  },
+  "repository": "https://github.com/BhaveshOneT/commercial-workflows",
+  "license": "Proprietary",
+  "keywords": ["sales", "email", "crm", "lead-classification", "sales-response"]
+}
