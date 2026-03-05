@@ -1,19 +1,6 @@
 ---
 name: sales-email-response
-description: >
-  ALWAYS use this skill when a user needs help responding to, analyzing,
-  or triaging an inbound sales email or prospect reply. This includes ANY
-  situation where someone received a reply from a lead or prospect and
-  wants to draft a response, classify intent (positive/neutral/negative),
-  or figure out next steps. Use even if the user doesn't say "sales" — if
-  they paste an email from someone they cold-emailed, a lead asking about
-  pricing, someone requesting list removal, or a contact referring to a
-  colleague, this skill applies. Also triggers on: check inbox for lead
-  replies, fetch a prospect's email, pull up a thread. Fetches emails via
-  M365 Outlook connector or works with pasted text. Provides structured
-  analysis with confidence scoring, evidence quoting, CRM actions, and a
-  draft reply. Do NOT use for cold outbound from scratch, drip sequences,
-  CRM pipeline management, support tickets, or bulk email.
+description: "ALWAYS use this skill when a user needs help responding to, analyzing, or triaging an inbound sales email or prospect reply. This includes ANY situation where someone received a reply from a lead or prospect and wants to draft a response, classify intent (positive/neutral/negative), or figure out next steps. Use even if the user does not say sales -- if they paste an email from someone they cold-emailed, a lead asking about pricing, someone requesting list removal, or a contact referring to a colleague, this skill applies. Also triggers on: check inbox for lead replies, fetch a prospect email, pull up a thread. Fetches emails via M365 Outlook connector or works with pasted text. Provides structured analysis with confidence scoring, evidence quoting, CRM actions, and a draft reply. Do NOT use for cold outbound from scratch, drip sequences, CRM pipeline management, support tickets, or bulk email."
 ---
 
 # Sales Email Response Skill
