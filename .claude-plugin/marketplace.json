@@ -9,6 +9,7 @@
       "name": "commercial-workflows",
       "description": "Sales and commercial workflow automation. Analyzes inbound email threads, classifies lead intent, drafts context-aware responses with M365 Outlook integration.",
       "source": "./",
+      "strict": false,
       "skills": [
         "./skills/sales-email-response"
       ]
