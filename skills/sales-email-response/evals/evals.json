@@ -1,0 +1,59 @@
+{
+  "skill_name": "sales-email-response",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Hey, I just got this reply from a lead I've been working. Can you help me draft a response?\n\n---\nFrom: Sarah Chen <sarah.chen@brightpath.io>\nTo: me\nSubject: Re: Quick question about your analytics platform\n\nHi,\n\nThanks for the follow-up. We've actually been looking at tools like yours — our current BI setup is duct-taped together and it's killing our reporting cycle.\n\nCan you send over pricing for a team of ~40 users? Also curious if you integrate with Snowflake — that's non-negotiable for us.\n\nWould be open to a call next week if you have time. Tuesday or Thursday afternoon works best.\n\nBest,\nSarah\nHead of Data, BrightPath\n---",
+      "expected_output": "Classification: POSITIVE with high confidence (90+). Evidence quotes pricing request and meeting availability. Draft under 120 words proposing time slots for Tuesday/Thursday.",
+      "files": [],
+      "expectations": [
+        "Classification is POSITIVE",
+        "Confidence score is 85 or higher",
+        "Evidence section quotes 'Can you send over pricing' or similar exact text from the email",
+        "Evidence section quotes 'Would be open to a call next week' or similar exact text from the email",
+        "Draft response is under 120 words",
+        "Draft response suggests specific time slots on Tuesday or Thursday as the sender requested",
+        "Draft response includes a booking link placeholder",
+        "Draft response does NOT contain anti-patterns like 'I hope this email finds you well' or 'just circling back'",
+        "Output includes the structured analysis block with all required sections (Classification, Confidence, Sender, Evidence, Routing, Missing Data, CRM Action)",
+        "Sender field includes Sarah Chen's name and role (Head of Data) and company (BrightPath)"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Got this back from a cold outreach I sent last week. What should I do with this one?\n\n---\nFrom: Derek Mullins <dmullins@steelforge-mfg.com>\nTo: me\nSubject: Re: Improving production floor visibility\n\nPlease remove me from your mailing list. We are not interested and already use SAP for everything.\n\nDo not contact this address again.\n\nDerek Mullins\nOperations Manager\nSteelForge Manufacturing\n---",
+      "expected_output": "Classification: NEGATIVE with very high confidence (95+). Evidence quotes removal request and competitor mention. Short graceful close draft (3-4 sentences). CRM action suggests marking as Lost.",
+      "files": [],
+      "expectations": [
+        "Classification is NEGATIVE",
+        "Confidence score is 90 or higher",
+        "Evidence section quotes 'Please remove me from your mailing list' or similar exact text",
+        "Evidence section quotes 'not interested' or 'already use SAP' as rejection signals",
+        "Draft response is 4 sentences or fewer",
+        "Draft response does NOT try to overcome the objection or re-pitch the product",
+        "Draft response does NOT suggest deleting the lead or any CRM records",
+        "Suggested CRM Action mentions marking as Lost or Negative",
+        "Output follows the structured analysis block format",
+        "Draft response ends warmly without a call-to-action"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "This one is tricky — not sure how to read it. Can you analyze this reply and help me figure out next steps?\n\n---\nFrom: Priya Kapoor <priya.kapoor@nimbushealth.com>\nTo: me\nSubject: Re: Streamlining patient intake workflows\n\nHi,\n\nThanks for reaching out. This is interesting but honestly the timing is rough — we're mid-migration to a new EHR system and the team is stretched thin. No bandwidth to evaluate new tools until at least Q3.\n\nThat said, our VP of Operations, James Liu, is the one who'd ultimately make this call. I'm cc'ing him here so he has context when the time comes. James — this is about a workflow automation tool for intake. Might be worth a look once we're through the migration.\n\nHope that helps,\nPriya\nDirector of Clinical Ops, Nimbus Health\n---",
+      "expected_output": "Classification: NEUTRAL (mixed signals — referral + timing objection). Confidence in the 60-75 range. Evidence quotes both the timing constraint and the referral to James Liu. Draft addresses the referral while respecting the timeline. CRM action suggests follow-up in Q3.",
+      "files": [],
+      "expectations": [
+        "Classification is NEUTRAL (not POSITIVE despite the referral, not NEGATIVE despite timing objection)",
+        "Confidence score is between 50 and 80",
+        "Evidence section identifies the timing objection — quotes language about Q3 or migration",
+        "Evidence section identifies the referral — quotes language about James Liu or VP of Operations",
+        "Draft response acknowledges the timing constraint without pushing for an earlier meeting",
+        "Draft response references or addresses James Liu (the referred person)",
+        "Suggested CRM Action mentions a Q3 follow-up or similar timing-based reminder",
+        "Output includes Missing Data flags or notes 'None' if all data is present",
+        "Draft does NOT try to schedule a meeting before Q3",
+        "Suggested Routing mentions James Liu or VP of Operations as the contact to engage"
+      ]
+    }
+  ]
+}
