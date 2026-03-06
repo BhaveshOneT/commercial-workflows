@@ -8,9 +8,12 @@
     {
       "name": "sales-email-response",
       "description": "Sales and commercial workflow automation. Analyzes inbound email threads, classifies lead intent, drafts context-aware responses with M365 Outlook integration.",
-      "source": "./skills/sales-email-response",
+      "source": "./",
       "category": "productivity",
-      "strict": false
+      "strict": false,
+      "skills": [
+        "./skills/sales-email-response"
+      ]
     }
   ]
 }
